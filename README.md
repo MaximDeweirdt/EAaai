@@ -1,4 +1,4 @@
 # EAaai
 EAai shit
 
-Stiaan is lelijk
+ik ben al heel mijn leven jaloers op Stiaan (Maxim)
