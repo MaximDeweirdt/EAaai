@@ -1,22 +1,25 @@
 package consumer;
 
-public class PersoneClient {
-	private double discount;
-	private double takeout;
-	private double service;
-	private double prepDistance;
-	private double spendMoney;
-	private double slowDelivery;
-	private double green;
-	private double budget;
-	
-	private int Xcoord;
-	private int Ycoord;
-	private int regio;
-	
-	
+import javax.xml.bind.annotation.XmlRootElement;
 
-	public PersoneClient(double discount, double takeout, double service, double prepDistance, double spendMoney, double slowDelivery,
+@XmlRootElement
+public class PersonClient {
+	protected double discount;
+	protected double takeout;
+	protected double service;
+	protected double prepDistance;
+	protected double spendMoney;
+	protected double slowDelivery;
+	protected double green;
+	protected double budget;
+	
+	protected int Xcoord;
+	protected int Ycoord;
+	protected int regio;
+	
+	public PersonClient(){}
+
+	public PersonClient(double discount, double takeout, double service, double prepDistance, double spendMoney, double slowDelivery,
 			double green, double budget) {
 		super();
 		this.discount = discount;
