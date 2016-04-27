@@ -1,6 +1,6 @@
 package consumer;
 
-public class PersoonClient {
+public class PersoneClient {
 	private double discount;
 	private double takeout;
 	private double service;
@@ -10,8 +10,13 @@ public class PersoonClient {
 	private double green;
 	private double budget;
 	
+	private int Xcoord;
+	private int Ycoord;
+	private int regio;
+	
+	
 
-	public PersoonClient(double discount, double takeout, double service, double prepDistance, double spendMoney, double slowDelivery,
+	public PersoneClient(double discount, double takeout, double service, double prepDistance, double spendMoney, double slowDelivery,
 			double green, double budget) {
 		super();
 		this.discount = discount;
@@ -71,6 +76,30 @@ public class PersoonClient {
 	}
 	public void setBudget(double budget) {
 		this.budget = budget;
+	}
+
+	public int getXcoord() {
+		return Xcoord;
+	}
+
+	public void setXcoord(int xcoord) {
+		Xcoord = xcoord;
+	}
+
+	public int getYcoord() {
+		return Ycoord;
+	}
+
+	public void setYcoord(int ycoord) {
+		Ycoord = ycoord;
+	}
+
+	public int getRegio() {
+		return regio;
+	}
+
+	public void setRegio(int regio) {
+		this.regio = regio;
 	}
 	
 	
