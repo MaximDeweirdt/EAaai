@@ -1,8 +1,12 @@
 package consumer;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement
+@XmlRootElement(name = "personClient")
+@XmlAccessorType (XmlAccessType.FIELD)
 public class PersonClient {
 	protected double discount;
 	protected double takeout;
@@ -30,6 +34,11 @@ public class PersonClient {
 		this.slowDelivery = slowDelivery;
 		this.green = green;
 		this.budget = budget;
+	}
+	
+	public void setData(double discount, double takeout, double service, double prepDistance, double spendMoney,
+			double slowDelivery, double green, double budget){
+		
 	}
 	
 	public double getDiscount() {
@@ -103,6 +112,20 @@ public class PersonClient {
 
 	public void setRegio(int regio) {
 		this.regio = regio;
+	}
+
+	public double getBudgetStartValue() {
+		return 0;
+	}
+
+	public void setBudgetStartValue(double budgetStartValue) {
+	}
+
+	public double getBudgetEndValue() {
+		return 0;
+	}
+
+	public void setBudgetEndValue(double budgetEndValue) {
 	}
 	
 	
