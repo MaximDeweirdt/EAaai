@@ -1,123 +1,123 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<oderList>
+<orderList>
     <order>
-        <discount>0.8</discount>
-        <takeout>0.4</takeout>
-        <service>0.3</service>
-        <prepDistance>0.4</prepDistance>
+        <discount>0.7</discount>
+        <takeout>0.8</takeout>
+        <service>0.9</service>
+        <prepDistance>0.1</prepDistance>
         <spendMoney>0.8</spendMoney>
-        <slowDelivery>0.5</slowDelivery>
-        <green>0.2</green>
-        <price>5086.0</price>
+        <slowDelivery>0.8</slowDelivery>
+        <green>0.4</green>
+        <price>8389.0</price>
+        <xCoordFirm>75</xCoordFirm>
+        <yCoordFirm>25</yCoordFirm>
+    </order>
+    <order>
+        <discount>0.2</discount>
+        <takeout>0.1</takeout>
+        <service>0.1</service>
+        <prepDistance>0.1</prepDistance>
+        <spendMoney>0.8</spendMoney>
+        <slowDelivery>0.0</slowDelivery>
+        <green>0.7</green>
+        <price>9912.0</price>
+        <xCoordFirm>25</xCoordFirm>
+        <yCoordFirm>75</yCoordFirm>
+    </order>
+    <order>
+        <discount>0.3</discount>
+        <takeout>0.1</takeout>
+        <service>0.7</service>
+        <prepDistance>0.8</prepDistance>
+        <spendMoney>0.8</spendMoney>
+        <slowDelivery>0.4</slowDelivery>
+        <green>0.5</green>
+        <price>8404.0</price>
         <xCoordFirm>25</xCoordFirm>
         <yCoordFirm>25</yCoordFirm>
+    </order>
+    <order>
+        <discount>0.6</discount>
+        <takeout>0.6</takeout>
+        <service>0.3</service>
+        <prepDistance>0.4</prepDistance>
+        <spendMoney>0.1</spendMoney>
+        <slowDelivery>0.8</slowDelivery>
+        <green>0.3</green>
+        <price>7541.0</price>
+        <xCoordFirm>75</xCoordFirm>
+        <yCoordFirm>75</yCoordFirm>
     </order>
     <order>
         <discount>0.9</discount>
         <takeout>0.0</takeout>
-        <service>0.9</service>
-        <prepDistance>0.2</prepDistance>
-        <spendMoney>0.1</spendMoney>
-        <slowDelivery>0.2</slowDelivery>
-        <green>0.1</green>
-        <price>6039.0</price>
-        <xCoordFirm>25</xCoordFirm>
-        <yCoordFirm>25</yCoordFirm>
-    </order>
-    <order>
-        <discount>0.4</discount>
-        <takeout>0.1</takeout>
-        <service>0.9</service>
-        <prepDistance>0.0</prepDistance>
-        <spendMoney>0.6</spendMoney>
-        <slowDelivery>0.6</slowDelivery>
-        <green>0.2</green>
-        <price>1560.0</price>
-        <xCoordFirm>75</xCoordFirm>
-        <yCoordFirm>25</yCoordFirm>
-    </order>
-    <order>
-        <discount>0.0</discount>
-        <takeout>0.9</takeout>
-        <service>0.4</service>
-        <prepDistance>0.4</prepDistance>
-        <spendMoney>0.4</spendMoney>
-        <slowDelivery>0.3</slowDelivery>
-        <green>0.3</green>
-        <price>8069.0</price>
-        <xCoordFirm>75</xCoordFirm>
-        <yCoordFirm>75</yCoordFirm>
-    </order>
-    <order>
-        <discount>0.0</discount>
-        <takeout>0.8</takeout>
-        <service>0.2</service>
-        <prepDistance>0.2</prepDistance>
-        <spendMoney>0.6</spendMoney>
-        <slowDelivery>0.3</slowDelivery>
-        <green>0.5</green>
-        <price>5614.0</price>
-        <xCoordFirm>75</xCoordFirm>
-        <yCoordFirm>25</yCoordFirm>
-    </order>
-    <order>
-        <discount>0.4</discount>
-        <takeout>0.3</takeout>
-        <service>0.5</service>
+        <service>0.6</service>
         <prepDistance>0.8</prepDistance>
         <spendMoney>0.5</spendMoney>
-        <slowDelivery>0.5</slowDelivery>
-        <green>0.1</green>
-        <price>9088.0</price>
-        <xCoordFirm>75</xCoordFirm>
+        <slowDelivery>0.8</slowDelivery>
+        <green>0.0</green>
+        <price>7897.0</price>
+        <xCoordFirm>25</xCoordFirm>
         <yCoordFirm>75</yCoordFirm>
     </order>
     <order>
-        <discount>0.1</discount>
-        <takeout>0.2</takeout>
-        <service>0.6</service>
-        <prepDistance>0.4</prepDistance>
-        <spendMoney>0.4</spendMoney>
-        <slowDelivery>0.2</slowDelivery>
-        <green>0.0</green>
-        <price>2246.0</price>
-        <xCoordFirm>75</xCoordFirm>
-        <yCoordFirm>25</yCoordFirm>
+        <discount>0.9</discount>
+        <takeout>0.5</takeout>
+        <service>0.5</service>
+        <prepDistance>0.0</prepDistance>
+        <spendMoney>0.6</spendMoney>
+        <slowDelivery>0.7</slowDelivery>
+        <green>0.3</green>
+        <price>7649.0</price>
+        <xCoordFirm>25</xCoordFirm>
+        <yCoordFirm>75</yCoordFirm>
     </order>
     <order>
-        <discount>0.3</discount>
-        <takeout>0.6</takeout>
+        <discount>0.2</discount>
+        <takeout>0.2</takeout>
         <service>0.8</service>
-        <prepDistance>0.0</prepDistance>
-        <spendMoney>0.1</spendMoney>
-        <slowDelivery>0.0</slowDelivery>
-        <green>0.7</green>
-        <price>8022.0</price>
-        <xCoordFirm>75</xCoordFirm>
+        <prepDistance>0.8</prepDistance>
+        <spendMoney>0.0</spendMoney>
+        <slowDelivery>0.3</slowDelivery>
+        <green>0.0</green>
+        <price>5424.0</price>
+        <xCoordFirm>25</xCoordFirm>
         <yCoordFirm>25</yCoordFirm>
     </order>
     <order>
         <discount>0.9</discount>
-        <takeout>0.8</takeout>
-        <service>0.0</service>
-        <prepDistance>0.7</prepDistance>
-        <spendMoney>0.7</spendMoney>
-        <slowDelivery>0.8</slowDelivery>
-        <green>0.7</green>
-        <price>2066.0</price>
+        <takeout>0.3</takeout>
+        <service>0.1</service>
+        <prepDistance>0.5</prepDistance>
+        <spendMoney>0.9</spendMoney>
+        <slowDelivery>0.3</slowDelivery>
+        <green>0.2</green>
+        <price>1902.0</price>
         <xCoordFirm>25</xCoordFirm>
-        <yCoordFirm>75</yCoordFirm>
+        <yCoordFirm>25</yCoordFirm>
     </order>
     <order>
-        <discount>0.6</discount>
-        <takeout>0.7</takeout>
-        <service>0.1</service>
+        <discount>0.7</discount>
+        <takeout>0.6</takeout>
+        <service>0.2</service>
         <prepDistance>0.3</prepDistance>
-        <spendMoney>0.8</spendMoney>
-        <slowDelivery>0.7</slowDelivery>
-        <green>0.3</green>
-        <price>6314.0</price>
+        <spendMoney>0.4</spendMoney>
+        <slowDelivery>0.8</slowDelivery>
+        <green>0.7</green>
+        <price>7894.0</price>
         <xCoordFirm>25</xCoordFirm>
-        <yCoordFirm>75</yCoordFirm>
+        <yCoordFirm>25</yCoordFirm>
     </order>
-</oderList>
+    <order>
+        <discount>0.5</discount>
+        <takeout>0.7</takeout>
+        <service>0.0</service>
+        <prepDistance>0.1</prepDistance>
+        <spendMoney>0.5</spendMoney>
+        <slowDelivery>0.5</slowDelivery>
+        <green>0.3</green>
+        <price>1537.0</price>
+        <xCoordFirm>25</xCoordFirm>
+        <yCoordFirm>25</yCoordFirm>
+    </order>
+</orderList>

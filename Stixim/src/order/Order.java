@@ -1,4 +1,4 @@
-package oder;
+package order;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -22,7 +22,7 @@ public class Order {
 	public Order(){}
 	
 	public Order(double discount, double takeout, double service, double prepDistance, double spendMoney,
-			double slowDelivery, double green, double price, int xCoordFirm, int yCoordFirm) {
+			double slowDelivery, double green, double price) {
 		super();
 		this.discount = discount;
 		this.takeout = takeout;

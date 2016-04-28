@@ -12,8 +12,8 @@ import javax.xml.bind.Marshaller;
 
 import consumer.PersonClient;
 import consumer.PersonListClient;
-import oder.Order;
-import oder.OrderList;
+import order.Order;
+import order.OrderList;
 
 public class DataGenOrder {
 	public static void main(String[] args) {
