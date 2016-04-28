@@ -19,6 +19,9 @@ public class NegotiationProtocol {
 			}else{//if not accepted, check with Blotzmann
 				personClient.setAcceptOrder(boltzmannCheck(personClient.getSpendMoney(),valueSpendMoney));
 			}
+			
+			
+			
 			if(personClient.isAcceptOrder())amountAccepted++;
 		}
 		System.out.println(amountAccepted);
