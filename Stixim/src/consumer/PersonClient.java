@@ -127,6 +127,14 @@ public class PersonClient {
 
 	public void setBudgetEndValue(double budgetEndValue) {
 	}
+
+	@Override
+	public String toString() {
+		return "PersonClient [discount=" + discount + ", takeout=" + takeout + ", service=" + service
+				+ ", prepDistance=" + prepDistance + ", spendMoney=" + spendMoney + ", slowDelivery=" + slowDelivery
+				+ ", green=" + green + ", budget=" + budget + ", Xcoord=" + Xcoord + ", Ycoord=" + Ycoord + ", regio="
+				+ regio + "]";
+	}
 	
 	
 	
