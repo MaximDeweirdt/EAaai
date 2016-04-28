@@ -28,7 +28,7 @@ public class DataGenConsumer {
 
 	        List<PersonClient> personList = new ArrayList<>();
 	        Random rand = new Random();
-	        for(int i=0;i<10;i++){
+	        for(int i=0;i<10000;i++){
 	        	int personType = rand.nextInt(4);
 	        	PersonClient person = getPerson(personType);
 	        	generateData(person,rand);
@@ -39,7 +39,7 @@ public class DataGenConsumer {
 	        PersonListClient plList = new PersonListClient(personList);
 	        
 	        //Marshal the employees list in console
-	        jaxbMarshaller.marshal(plList, System.out);
+	       //jaxbMarshaller.marshal(plList, System.out);
 	         
 
 	        jaxbMarshaller.marshal(plList,file);
@@ -62,18 +62,18 @@ public class DataGenConsumer {
 		double budgetStartValue = person.getBudgetStartValue();
 		double budgetEndValue = person.getBudgetEndValue();
 		int budgetDiff = (int) (budgetEndValue - budgetStartValue);
-		System.out.println(person.getClass());
+		//System.out.println(person.getClass());
 		int budgetOffset = rand.nextInt(budgetDiff);
 		person.setData(discountOffset, discountTakeoutOffset, serviceOffset, prepDistanceOffset, spendMoneyOffset, slowDeliveryOffset, greenOffset, budgetOffset);
 		
 		int Xcoord = rand.nextInt(100);
 		int Ycoord = rand.nextInt(100);
 		int regio = 0;
-		if(Xcoord == 25){
-			if(Ycoord == 25) regio = 0;
+		if(Xcoord <= 25){
+			if(Ycoord <= 25) regio = 0;
 			else regio = 2;
 		}else{
-			if(Ycoord == 25) regio = 1;
+			if(Ycoord <= 25) regio = 1;
 			else regio = 3;
 		}
 		person.setXcoord(Xcoord);

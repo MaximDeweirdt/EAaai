@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 
 import javax.xml.parsers.*;
@@ -45,12 +46,40 @@ public class Simulath0rMain {
 	        NegotiationProtocol negotiationProtocol = new NegotiationProtocol();
 	        negotiationProtocol.negotiate(solution);
 	        
+	        printValues(solution);
+	        
 	    } catch (Exception e) {
 	        e.printStackTrace();
 	    }
 	}
 
 	
+	private static void printValues(Solution solution) {
+		Map<Integer, List<PersonClient>> personMap = solution.getPersonMap();
+		for (Map.Entry<Integer, List<PersonClient>> entry : personMap.entrySet()) {
+			Integer key = entry.getKey();
+		    List<PersonClient> personList = entry.getValue();
+		    double takeOutAmount = 0;
+		    double slowDelivery = 0;
+		    double notAcceptedOrder = 0;
+		    double normalDelivery = 0;
+		    for(PersonClient person:personList){
+		    	if(!person.isAcceptOrder())notAcceptedOrder++;
+		    	if(person.isLateDelivery())slowDelivery++;
+		    	if(person.isTakeoutBoolean())takeOutAmount++;
+		    	if(person.isDeliveryAtHome())normalDelivery++;
+		    }
+		    System.out.println("Gebied " + key + " gegevens");
+		    System.out.println("aantal afhalen = " + takeOutAmount);
+		    System.out.println("aantal vertraagd leveren = " + slowDelivery);
+		    System.out.println("aantal normale levering = " + normalDelivery);
+		    System.out.println("aantal niet geaccepteerde bestellingen = " + notAcceptedOrder);
+		    System.out.println();
+		    
+		}
+	}
+
+
 	private static List<Order> unmarshalDataOrder(NodeList nList) {
 		List<Order> orderList = new ArrayList<>();
 		for (int temp = 0; temp < nList.getLength(); temp++) {

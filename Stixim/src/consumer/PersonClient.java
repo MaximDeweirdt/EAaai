@@ -24,9 +24,10 @@ public class PersonClient {
 	protected int regio;
 	
 	private Order order;
-	private boolean acceptOrder;
-	private boolean lateDelivery;
-	private boolean takeoutBoolean;
+	private boolean acceptOrder = false;
+	private boolean lateDelivery = false;
+	private boolean takeoutBoolean = false;
+	private boolean deliveryAtHome = false;
 	
 	public PersonClient(){}
 
@@ -166,14 +167,23 @@ public class PersonClient {
 	public void setTakeoutBoolean(boolean takeoutBoolean) {
 		this.takeoutBoolean = takeoutBoolean;
 	}
+	
+
+	public boolean isDeliveryAtHome() {
+		return deliveryAtHome;
+	}
+
+	public void setDeliveryAtHome(boolean deliveryAtHome) {
+		this.deliveryAtHome = deliveryAtHome;
+	}
 
 	@Override
 	public String toString() {
-		return "PersonClient [discount=" + discount + ", takeout=" + takeout + ", service=" + service
-				+ ", prepDistance=" + prepDistance + ", spendMoney=" + spendMoney + ", slowDelivery=" + slowDelivery
-				+ ", green=" + green + ", budget=" + budget + ", Xcoord=" + Xcoord + ", Ycoord=" + Ycoord + ", regio="
-				+ regio + "]";
+		return "PersonClient [acceptOrder=" + acceptOrder + ", lateDelivery=" + lateDelivery + ", takeoutBoolean="
+				+ takeoutBoolean + ", deliveryAtHome=" + deliveryAtHome + "]";
 	}
+
+
 	
 	
 	
