@@ -22,15 +22,33 @@ public class GreenPeople extends PersonClient{
 		// TODO Auto-generated constructor stub
 	}
 	
-	public void setData(double discount, double takeout, double service, double prepDistance, double spendMoney,
-			double slowDelivery, double green, double budget){
-			this.discount = discount;
-			this.takeout = takeout;
-			this.service = service;
-			this.prepDistance = prepDistance;
-			this.spendMoney = spendMoney;
-			this.slowDelivery = slowDelivery;
-			this.green = green;
-			this.budget = budget;			
+	@Override
+	public void setData(double discountOffset,double  discountTakeoutOffset, double serviceOffset, double prepDistanceOffset, double spendMoneyOffset, double slowDeliveryOffset, double greenOffset, double budgetOffset){
+			this.discount = discountStartValue + discountOffset;
+			this.takeout = takeoutStartValue + discountTakeoutOffset;
+			this.service = serviceStartValue + serviceOffset;
+			this.prepDistance = prepDistanceStartValue + prepDistanceOffset;
+			this.spendMoney = spendMoneyStartValue + spendMoneyOffset;
+			this.slowDelivery = slowDeliveryStartValue + slowDeliveryOffset;
+			this.green = greenStartValue + greenOffset;
+			this.budget = budgetStartValue + budgetOffset;			
+	}
+	
+	@Override
+	public double getBudgetStartValue() {
+		return budgetStartValue;
+	}
+
+	@Override
+	public void setBudgetStartValue(double budgetStartValue) {
+	}
+
+	@Override
+	public double getBudgetEndValue() {
+		return budgetEndValue;
+	}
+
+	@Override
+	public void setBudgetEndValue(double budgetEndValue) {
 	}
 }

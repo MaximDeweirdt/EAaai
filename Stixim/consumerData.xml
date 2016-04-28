@@ -1,140 +1,133 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<personClient>
-    <budget>0.0</budget>
-    <discount>0.0</discount>
-    <green>0.0</green>
-    <prepDistance>0.0</prepDistance>
-    <regio>0</regio>
-    <service>0.0</service>
-    <slowDelivery>0.0</slowDelivery>
-    <spendMoney>0.0</spendMoney>
-    <takeout>0.0</takeout>
-    <xcoord>0</xcoord>
-    <ycoord>0</ycoord>
-</personClient>
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<personClient>
-    <budget>0.0</budget>
-    <discount>0.0</discount>
-    <green>0.0</green>
-    <prepDistance>0.0</prepDistance>
-    <regio>0</regio>
-    <service>0.0</service>
-    <slowDelivery>0.0</slowDelivery>
-    <spendMoney>0.0</spendMoney>
-    <takeout>0.0</takeout>
-    <xcoord>0</xcoord>
-    <ycoord>0</ycoord>
-</personClient>
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<personClient>
-    <budget>0.0</budget>
-    <discount>0.0</discount>
-    <green>0.0</green>
-    <prepDistance>0.0</prepDistance>
-    <regio>0</regio>
-    <service>0.0</service>
-    <slowDelivery>0.0</slowDelivery>
-    <spendMoney>0.0</spendMoney>
-    <takeout>0.0</takeout>
-    <xcoord>0</xcoord>
-    <ycoord>0</ycoord>
-</personClient>
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<personClient>
-    <budget>0.0</budget>
-    <discount>0.0</discount>
-    <green>0.0</green>
-    <prepDistance>0.0</prepDistance>
-    <regio>0</regio>
-    <service>0.0</service>
-    <slowDelivery>0.0</slowDelivery>
-    <spendMoney>0.0</spendMoney>
-    <takeout>0.0</takeout>
-    <xcoord>0</xcoord>
-    <ycoord>0</ycoord>
-</personClient>
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<personClient>
-    <budget>0.0</budget>
-    <discount>0.0</discount>
-    <green>0.0</green>
-    <prepDistance>0.0</prepDistance>
-    <regio>0</regio>
-    <service>0.0</service>
-    <slowDelivery>0.0</slowDelivery>
-    <spendMoney>0.0</spendMoney>
-    <takeout>0.0</takeout>
-    <xcoord>0</xcoord>
-    <ycoord>0</ycoord>
-</personClient>
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<personClient>
-    <budget>0.0</budget>
-    <discount>0.0</discount>
-    <green>0.0</green>
-    <prepDistance>0.0</prepDistance>
-    <regio>0</regio>
-    <service>0.0</service>
-    <slowDelivery>0.0</slowDelivery>
-    <spendMoney>0.0</spendMoney>
-    <takeout>0.0</takeout>
-    <xcoord>0</xcoord>
-    <ycoord>0</ycoord>
-</personClient>
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<personClient>
-    <budget>0.0</budget>
-    <discount>0.0</discount>
-    <green>0.0</green>
-    <prepDistance>0.0</prepDistance>
-    <regio>0</regio>
-    <service>0.0</service>
-    <slowDelivery>0.0</slowDelivery>
-    <spendMoney>0.0</spendMoney>
-    <takeout>0.0</takeout>
-    <xcoord>0</xcoord>
-    <ycoord>0</ycoord>
-</personClient>
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<personClient>
-    <budget>0.0</budget>
-    <discount>0.0</discount>
-    <green>0.0</green>
-    <prepDistance>0.0</prepDistance>
-    <regio>0</regio>
-    <service>0.0</service>
-    <slowDelivery>0.0</slowDelivery>
-    <spendMoney>0.0</spendMoney>
-    <takeout>0.0</takeout>
-    <xcoord>0</xcoord>
-    <ycoord>0</ycoord>
-</personClient>
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<personClient>
-    <budget>0.0</budget>
-    <discount>0.0</discount>
-    <green>0.0</green>
-    <prepDistance>0.0</prepDistance>
-    <regio>0</regio>
-    <service>0.0</service>
-    <slowDelivery>0.0</slowDelivery>
-    <spendMoney>0.0</spendMoney>
-    <takeout>0.0</takeout>
-    <xcoord>0</xcoord>
-    <ycoord>0</ycoord>
-</personClient>
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<personClient>
-    <budget>0.0</budget>
-    <discount>0.0</discount>
-    <green>0.0</green>
-    <prepDistance>0.0</prepDistance>
-    <regio>0</regio>
-    <service>0.0</service>
-    <slowDelivery>0.0</slowDelivery>
-    <spendMoney>0.0</spendMoney>
-    <takeout>0.0</takeout>
-    <xcoord>0</xcoord>
-    <ycoord>0</ycoord>
-</personClient>
+<personlist>
+    <personClient>
+        <discount>0.3</discount>
+        <takeout>0.7</takeout>
+        <service>0.4</service>
+        <prepDistance>0.25</prepDistance>
+        <spendMoney>0.05</spendMoney>
+        <slowDelivery>0.5</slowDelivery>
+        <green>0.2</green>
+        <budget>59050.0</budget>
+        <Xcoord>10</Xcoord>
+        <Ycoord>73</Ycoord>
+        <regio>3</regio>
+    </personClient>
+    <personClient>
+        <discount>0.7</discount>
+        <takeout>0.5</takeout>
+        <service>0.65</service>
+        <prepDistance>0.25</prepDistance>
+        <spendMoney>0.15</spendMoney>
+        <slowDelivery>0.5</slowDelivery>
+        <green>0.2</green>
+        <budget>1096.0</budget>
+        <Xcoord>52</Xcoord>
+        <Ycoord>40</Ycoord>
+        <regio>0</regio>
+    </personClient>
+    <personClient>
+        <discount>0.3</discount>
+        <takeout>0.7</takeout>
+        <service>0.4</service>
+        <prepDistance>0.25</prepDistance>
+        <spendMoney>0.05</spendMoney>
+        <slowDelivery>0.5</slowDelivery>
+        <green>0.2</green>
+        <budget>58088.0</budget>
+        <Xcoord>83</Xcoord>
+        <Ycoord>4</Ycoord>
+        <regio>0</regio>
+    </personClient>
+    <personClient>
+        <discount>0.7</discount>
+        <takeout>0.5</takeout>
+        <service>0.65</service>
+        <prepDistance>0.25</prepDistance>
+        <spendMoney>0.15</spendMoney>
+        <slowDelivery>0.5</slowDelivery>
+        <green>0.2</green>
+        <budget>1732.0</budget>
+        <Xcoord>7</Xcoord>
+        <Ycoord>15</Ycoord>
+        <regio>1</regio>
+    </personClient>
+    <personClient>
+        <discount>0.6</discount>
+        <takeout>0.85</takeout>
+        <service>0.3</service>
+        <prepDistance>0.6</prepDistance>
+        <spendMoney>0.1</spendMoney>
+        <slowDelivery>0.75</slowDelivery>
+        <green>0.8</green>
+        <budget>45110.0</budget>
+        <Xcoord>29</Xcoord>
+        <Ycoord>51</Ycoord>
+        <regio>2</regio>
+    </personClient>
+    <personClient>
+        <discount>0.6</discount>
+        <takeout>0.85</takeout>
+        <service>0.3</service>
+        <prepDistance>0.6</prepDistance>
+        <spendMoney>0.1</spendMoney>
+        <slowDelivery>0.75</slowDelivery>
+        <green>0.8</green>
+        <budget>34290.0</budget>
+        <Xcoord>44</Xcoord>
+        <Ycoord>54</Ycoord>
+        <regio>3</regio>
+    </personClient>
+    <personClient>
+        <discount>0.3</discount>
+        <takeout>0.7</takeout>
+        <service>0.4</service>
+        <prepDistance>0.25</prepDistance>
+        <spendMoney>0.05</spendMoney>
+        <slowDelivery>0.5</slowDelivery>
+        <green>0.2</green>
+        <budget>51560.0</budget>
+        <Xcoord>20</Xcoord>
+        <Ycoord>50</Ycoord>
+        <regio>0</regio>
+    </personClient>
+    <personClient>
+        <discount>0.05</discount>
+        <takeout>0.05</takeout>
+        <service>0.85</service>
+        <prepDistance>0.1</prepDistance>
+        <spendMoney>0.1</spendMoney>
+        <slowDelivery>0.0</slowDelivery>
+        <green>0.1</green>
+        <budget>240884.0</budget>
+        <Xcoord>50</Xcoord>
+        <Ycoord>37</Ycoord>
+        <regio>1</regio>
+    </personClient>
+    <personClient>
+        <discount>0.7</discount>
+        <takeout>0.5</takeout>
+        <service>0.65</service>
+        <prepDistance>0.25</prepDistance>
+        <spendMoney>0.15</spendMoney>
+        <slowDelivery>0.5</slowDelivery>
+        <green>0.2</green>
+        <budget>1299.0</budget>
+        <Xcoord>52</Xcoord>
+        <Ycoord>55</Ycoord>
+        <regio>0</regio>
+    </personClient>
+    <personClient>
+        <discount>0.3</discount>
+        <takeout>0.7</takeout>
+        <service>0.4</service>
+        <prepDistance>0.25</prepDistance>
+        <spendMoney>0.05</spendMoney>
+        <slowDelivery>0.5</slowDelivery>
+        <green>0.2</green>
+        <budget>76539.0</budget>
+        <Xcoord>49</Xcoord>
+        <Ycoord>83</Ycoord>
+        <regio>3</regio>
+    </personClient>
+</personlist>
