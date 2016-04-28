@@ -5,6 +5,8 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
+import order.Order;
+
 @XmlRootElement(name = "personClient")
 @XmlAccessorType (XmlAccessType.FIELD)
 public class PersonClient {
@@ -20,6 +22,11 @@ public class PersonClient {
 	protected int Xcoord;
 	protected int Ycoord;
 	protected int regio;
+	
+	private Order order;
+	private boolean acceptOrder;
+	private boolean lateDelivery;
+	private boolean takeoutBoolean;
 	
 	public PersonClient(){}
 
@@ -126,6 +133,38 @@ public class PersonClient {
 	}
 
 	public void setBudgetEndValue(double budgetEndValue) {
+	}
+
+	public Order getOrder() {
+		return order;
+	}
+
+	public void setOrder(Order order) {
+		this.order = order;
+	}
+
+	public boolean isAcceptOrder() {
+		return acceptOrder;
+	}
+
+	public void setAcceptOrder(boolean acceptOrder) {
+		this.acceptOrder = acceptOrder;
+	}
+
+	public boolean isLateDelivery() {
+		return lateDelivery;
+	}
+
+	public void setLateDelivery(boolean lateDelivery) {
+		this.lateDelivery = lateDelivery;
+	}
+
+	public boolean isTakeoutBoolean() {
+		return takeoutBoolean;
+	}
+
+	public void setTakeoutBoolean(boolean takeoutBoolean) {
+		this.takeoutBoolean = takeoutBoolean;
 	}
 
 	@Override

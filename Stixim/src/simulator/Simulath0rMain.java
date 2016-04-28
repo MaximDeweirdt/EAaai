@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import javax.xml.parsers.*;
 import javax.xml.transform.*;
@@ -22,23 +23,27 @@ public class Simulath0rMain {
 	public static void main(String[] args) {
 	    
 	    try {
-	    	//read consumer data
-	    	File fXmlFile = new File("consumerData.xml");
-    	    DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-    	    DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-    	    Document doc = dBuilder.parse(fXmlFile);
-    	    doc.getDocumentElement().normalize();
-	        NodeList nList = doc.getElementsByTagName("personClient");
-	        List<PersonClient> personList = unmarshalData(nList);
-	        
 	        //read order data
-	        fXmlFile = new File("orderData.xml");
+	    	File fXmlFile = new File("orderData.xml");
+	    	DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+	    	DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+	    	Document doc = dBuilder.parse(fXmlFile);
+    	    doc.getDocumentElement().normalize();
+    	    NodeList nList = doc.getElementsByTagName("order");
+	        List<Order> orderList = unmarshalDataOrder(nList);
+	        
+	    	//read consumer data
+	    	fXmlFile = new File("consumerData.xml");
     	    dbFactory = DocumentBuilderFactory.newInstance();
     	    dBuilder = dbFactory.newDocumentBuilder();
     	    doc = dBuilder.parse(fXmlFile);
     	    doc.getDocumentElement().normalize();
-	        nList = doc.getElementsByTagName("order");
-	        List<Order> orderList = unmarshalDataOrder(nList);
+	        nList = doc.getElementsByTagName("personClient");
+	        List<PersonClient> personList = unmarshalData(nList,orderList);
+	        
+	        Solution solution = new Solution(orderList,personList);
+	        NegotiationProtocol negotiationProtocol = new NegotiationProtocol();
+	        negotiationProtocol.negotiate(solution);
 	        
 	    } catch (Exception e) {
 	        e.printStackTrace();
@@ -101,7 +106,7 @@ public class Simulath0rMain {
 		return orderList;
 	}
 
-	private static List<PersonClient> unmarshalData(NodeList nList) {
+	private static List<PersonClient> unmarshalData(NodeList nList, List<Order> orderList) {
 		List<PersonClient> personList = new ArrayList<>();
 		for (int temp = 0; temp < nList.getLength(); temp++) {
 
@@ -139,6 +144,9 @@ public class Simulath0rMain {
             	person.setYcoord(ycoord);
             	person.setRegio(regio);
             	
+            	//add random order to the person
+            	Random rand = new Random(0);
+            	person.setOrder(orderList.get(rand.nextInt(orderList.size()-1)));            	
             	personList.add(person);
             	
 //            	System.out.println(person);
