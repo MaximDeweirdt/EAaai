@@ -68,8 +68,14 @@ public class DataGenConsumer {
 		
 		int Xcoord = rand.nextInt(100);
 		int Ycoord = rand.nextInt(100);
-		int regio = rand.nextInt(4);
-		
+		int regio = 0;
+		if(Xcoord == 25){
+			if(Ycoord == 25) regio = 0;
+			else regio = 2;
+		}else{
+			if(Ycoord == 25) regio = 1;
+			else regio = 3;
+		}
 		person.setXcoord(Xcoord);
 		person.setYcoord(Ycoord);
 		person.setRegio(regio);
