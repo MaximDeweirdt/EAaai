@@ -75,7 +75,6 @@ public class Simulath0rMain {
 		    System.out.println("aantal normale levering = " + normalDelivery);
 		    System.out.println("aantal niet geaccepteerde bestellingen = " + notAcceptedOrder);
 		    System.out.println();
-		    
 		}
 	}
 

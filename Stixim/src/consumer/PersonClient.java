@@ -89,6 +89,7 @@ public class PersonClient {
 		return green;
 	}
 	public void setGreen(double green) {
+		if(green>1) green = 1 ;
 		this.green = green;
 	}
 	public double getBudget() {

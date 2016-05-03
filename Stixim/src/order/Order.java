@@ -53,6 +53,8 @@ public class Order {
 	}
 	
 	public void setDiscount(double discount) {
+		if(discount>0.4) discount = 0.4;
+		if(discount<0.2) discount = 0.2;
 		this.discount = discount;
 	}
 	
@@ -61,6 +63,8 @@ public class Order {
 	}
 	
 	public void setTakeout(double takeout) {
+		if(takeout>0.8) takeout = 0.8;
+		if(takeout<0.2) takeout = 0.2;
 		this.takeout = takeout;
 	}
 	

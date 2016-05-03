@@ -29,15 +29,23 @@ public class NegotiationProtocol {
 			if(acceptedOrder){
 				double distance = Math.sqrt((personClient.getXcoord() - order.getxCoordFirm())*(personClient.getXcoord() - order.getxCoordFirm())
 						+ (personClient.getYcoord() - order.getyCoordFirm())*(personClient.getYcoord() - order.getyCoordFirm()));
-				valueTakeout = (personClient.getTakeout() - order.getTakeout()) + (personClient.getGreen() - order.getGreen()) + (personClient.getPrepDistance()) - (distance)/personClient.getPrepDistance();
+				valueTakeout = (personClient.getTakeout() - order.getTakeout()) + (personClient.getGreen() - order.getGreen()) + (personClient.getPrepDistance()) - (distance)/100;
 				valueTakeout = valueTakeout/3;
-				valueDelayedDelivery = personClient.getDiscount() - order.getDiscount();
-			
+				valueDelayedDelivery = (order.getDiscount() - personClient.getDiscount());
+				System.out.println(valueTakeout + " " + valueDelayedDelivery);
 			if(valueTakeout<valueDelayedDelivery){
+				boolean check = boltzmannCheck(valueDelayedDelivery, 0);
 				if(valueDelayedDelivery>0)personClient.setLateDelivery(true);
+				/*else if(check){
+					personClient.setLateDelivery(true);
+				}*/
 				else personClient.setDeliveryAtHome(true);
 			}else{
+				boolean check = boltzmannCheck(valueDelayedDelivery, 0);
 				if(valueTakeout>0)personClient.setTakeoutBoolean(true);
+				/*else if(check){
+					personClient.setTakeoutBoolean(true);
+				}*/
 				else personClient.setDeliveryAtHome(true);
 			}
 			}
@@ -60,24 +68,21 @@ public class NegotiationProtocol {
 				order.setTakeout(orderTakeoutValue);
 				//update the other people to takeout
 				Map<Integer, List<PersonClient>> personMap = solution.getPersonMap();
-				for (Map.Entry<Integer, List<PersonClient>> entry : personMap.entrySet()) {
-				    Integer key = entry.getKey();
-				    List<PersonClient> personList = entry.getValue();
+				    List<PersonClient> personList = personMap.get(personClient.getRegio());
 				    for(PersonClient person:personList){
-				    	double valueGreen = person.getGreen() + 0.001;
+				    	double valueGreen = person.getGreen() + 0.000001;
 				    	person.setGreen(valueGreen);
 				    }
-				}
 			}else{
 				double orderTakeoutValue = order.getTakeout() + 0.001;
 				order.setTakeout(orderTakeoutValue);
 			}
 			
 			if(personClient.isLateDelivery()){
-				double discountOrder = order.getDiscount() - 0.001;
+				double discountOrder = order.getDiscount() + 0.1;
 				order.setDiscount(discountOrder);
 			}else{
-				double discountOrder = order.getDiscount() + 0.001;
+				double discountOrder = order.getDiscount() - 0.1;
 				order.setDiscount(discountOrder);
 			}
 		}
