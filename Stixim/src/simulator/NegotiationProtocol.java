@@ -41,6 +41,9 @@ public class NegotiationProtocol {
 				else personClient.setDeliveryAtHome(true);
 			}
 			}
+			
+			
+			
 			if(personClient.isAcceptOrder())amountAccepted++;
 			
 			//update prijzen indien de order in de eerste stap niet geaccepteerd is
