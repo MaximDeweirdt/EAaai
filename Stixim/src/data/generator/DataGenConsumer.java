@@ -85,12 +85,16 @@ public class DataGenConsumer {
 		PersonClient person = null;
 		switch(personType){
 		case 0: person = new YoungPeople();
+				person.setPeopleClasee("young");
 				break;
 		case 1: person = new OldPeople();
+				person.setPeopleClasee("old");
 				break;
 		case 2: person = new GreenPeople();
+				person.setPeopleClasee("green");
 				break;
 		case 3: person = new RichPeople();
+				person.setPeopleClasee("rich");
 				break;
 		default : person = null;
 				break;

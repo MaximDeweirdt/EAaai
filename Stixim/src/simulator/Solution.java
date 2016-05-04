@@ -60,6 +60,28 @@ public class Solution {
 	public void setPersonMap(Map<Integer, List<PersonClient>> personMap) {
 		this.personMap = personMap;
 	}
+
+	public void updateValuesPersons(double greenValue, double takeoutValue, double discountValue, double distanceValue,
+			double spendValue) {
+		for(PersonClient person:personList){
+			double green = person.getGreen();
+			person.setGreen(green+greenValue);
+			
+			double takeout = person.getTakeout();
+			person.setTakeout(takeout+takeoutValue);
+			
+			double discount = person.getDiscount();
+			person.setDiscount(discount+discountValue);
+			
+			double distance = person.getPrepDistance();
+			person.setPrepDistance(distance+distanceValue);
+			
+			double spend = person.getSpendMoney();
+			person.setSpendMoney(spend+spendValue);
+			
+		}
+		
+	}
 	
 	
 	

@@ -30,9 +30,9 @@ public class NegotiationProtocol {
 				double distance = Math.sqrt((personClient.getXcoord() - order.getxCoordFirm())*(personClient.getXcoord() - order.getxCoordFirm())
 						+ (personClient.getYcoord() - order.getyCoordFirm())*(personClient.getYcoord() - order.getyCoordFirm()));
 				valueTakeout = (personClient.getTakeout() - order.getTakeout()) + (personClient.getGreen() - order.getGreen()) + (personClient.getPrepDistance()) - (distance)/100;
-				valueTakeout = valueTakeout/3;
+				valueTakeout = valueTakeout;
 				valueDelayedDelivery = (order.getDiscount() - personClient.getDiscount());
-				System.out.println(valueTakeout + " " + valueDelayedDelivery);
+				//System.out.println(valueTakeout + " " + valueDelayedDelivery);
 			if(valueTakeout<valueDelayedDelivery){
 				boolean check = boltzmannCheck(valueDelayedDelivery, 0);
 				if(valueDelayedDelivery>0)personClient.setLateDelivery(true);

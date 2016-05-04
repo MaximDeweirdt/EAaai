@@ -28,6 +28,7 @@ public class PersonClient {
 	private boolean lateDelivery = false;
 	private boolean takeoutBoolean = false;
 	private boolean deliveryAtHome = false;
+	private String peopleClasee = null;
 	
 	public PersonClient(){}
 
@@ -182,6 +183,14 @@ public class PersonClient {
 	public String toString() {
 		return "PersonClient [acceptOrder=" + acceptOrder + ", lateDelivery=" + lateDelivery + ", takeoutBoolean="
 				+ takeoutBoolean + ", deliveryAtHome=" + deliveryAtHome + "]";
+	}
+
+	public String getPeopleClasee() {
+		return peopleClasee;
+	}
+
+	public void setPeopleClasee(String peopleClasee) {
+		this.peopleClasee = peopleClasee;
 	}
 
 
