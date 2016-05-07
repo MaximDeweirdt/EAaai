@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="561.0" prefWidth="717.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MainController">
+   <children>
+      <BorderPane prefHeight="69.0" prefWidth="81.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <Pane prefHeight="460.0" prefWidth="278.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Slider fx:id="greenSlider" layoutX="30.0" layoutY="80.0" majorTickUnit="0.2" max="1.0" min="-1.0" minorTickCount="1" onMouseClicked="#onGreenChangeEvent" onMouseDragged="#onGreenChangeEvent" showTickMarks="true" />
+                  <Slider fx:id="takeoutSlider" layoutX="30.0" layoutY="150.0" majorTickUnit="0.2" max="1.0" min="-1.0" minorTickCount="1" onMouseDragged="#onTakeChangeEvent" showTickMarks="true" />
+                  <Slider fx:id="discountSlider" layoutX="30.0" layoutY="220.0" majorTickUnit="0.2" max="1.0" min="-1.0" minorTickCount="1" onDragDetected="#onDiscChangeEvent" onMouseDragged="#onDiscChangeEvent" showTickMarks="true" />
+                  <Slider fx:id="distanceSlider" layoutX="30.0" layoutY="290.0" majorTickUnit="0.2" max="1.0" min="-1.0" minorTickCount="1" onMouseDragged="#onDistChangeEvent" showTickMarks="true" />
+                  <Slider fx:id="spendSlider" layoutX="30.0" layoutY="360.0" majorTickUnit="0.2" max="1.0" min="-1.0" minorTickCount="1" onDragDetected="#onSpendChangeEvent" onMouseDragged="#onSpendChangeEvent" showTickMarks="true" />
+                  <Label layoutX="68.0" layoutY="50.0" text="Green Value" />
+                  <Label layoutX="61.0" layoutY="120.0" text="Take out Value" />
+                  <Label layoutX="60.0" layoutY="190.0" text="Discount Value" />
+                  <Label layoutX="60.0" layoutY="260.0" text="Distance Value" />
+                  <Label layoutX="66.0" layoutY="330.0" text="Spend Value" />
+                  <Label fx:id="greenLabel" layoutX="205.0" layoutY="80.0" text="0" />
+                  <Label fx:id="takeLabel" layoutX="205.0" layoutY="150.0" text="0" />
+                  <Label fx:id="discountLabel" layoutX="205.0" layoutY="220.0" text="0" />
+                  <Label fx:id="distanceLabel" layoutX="205.0" layoutY="290.0" text="0" />
+                  <Label fx:id="spendLabel" layoutX="205.0" layoutY="360.0" text="0" />
+               </children>
+            </Pane>
+         </left>
+         <bottom>
+            <Pane prefHeight="101.0" prefWidth="512.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="generateButton" layoutX="131.0" layoutY="30.0" mnemonicParsing="false" onAction="#onGenerateClickEvent" prefHeight="40.0" prefWidth="100.0" text="Generate" />
+                  <Button fx:id="clearButton" layoutX="381.0" layoutY="30.0" mnemonicParsing="false" onAction="#onClearClickEvent" prefHeight="40.0" prefWidth="100.0" text="Clear" />
+               </children>
+            </Pane>
+         </bottom>
+         <center>
+            <TextArea fx:id="dataTextArea" editable="false" prefHeight="699.0" prefWidth="656.0" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
