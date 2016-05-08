@@ -47,8 +47,14 @@ public class MainController implements Initializable {
 	private Slider distanceSlider;
 
 	@FXML
-	private TextArea dataTextArea;
-
+	private TextArea dataTextArea1;
+	@FXML
+	private TextArea dataTextArea2;
+	@FXML
+	private TextArea dataTextArea3;
+	@FXML
+	private TextArea dataTextArea4;
+	
 	@FXML
 	private Label distanceLabel;
 	@FXML
@@ -116,7 +122,10 @@ public class MainController implements Initializable {
 
 	public void onClearClickEvent() {
 
-		dataTextArea.clear();
+		dataTextArea1.clear();
+		dataTextArea2.clear();
+		dataTextArea3.clear();
+		dataTextArea4.clear();
 		
 		spendSlider.setValue(0);
 		greenSlider.setValue(0);
@@ -234,6 +243,18 @@ public class MainController implements Initializable {
 					amountOfOldPeople++;
 				if (person.getPeopleClasee().equals("rich"))
 					amountOfRichPeople++;
+			}
+			TextArea dataTextArea;
+			switch(key){
+				case 0: dataTextArea = dataTextArea1;
+						break;
+				case 1: dataTextArea = dataTextArea2;
+						break;
+				case 2: dataTextArea = dataTextArea3;
+						break;
+				case 3: dataTextArea = dataTextArea4;
+						break;
+				default:dataTextArea = dataTextArea1;
 			}
 			dataTextArea.appendText("Gebied " + key + " gegevens\n");
 			dataTextArea.appendText("aantal afhalen = " + takeOutAmount + "\n");
