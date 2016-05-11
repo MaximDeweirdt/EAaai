@@ -203,7 +203,7 @@ public class MainController implements Initializable {
 				person.setRegio(regio);
 
 				// add random order to the person
-				Random rand = new Random(0);
+				Random rand = new Random();
 				person.setOrder(orderList.get(rand.nextInt(orderList.size() - 1)));
 				personList.add(person);
 

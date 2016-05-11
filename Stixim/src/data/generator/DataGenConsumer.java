@@ -18,7 +18,8 @@ import consumer.RichPeople;
 import consumer.YoungPeople;
 
 public class DataGenConsumer {
-
+	private static Random rand;
+	
 	public static void main(String[] args) {
 		try{ 
 			FileOutputStream file = new FileOutputStream("consumerData.xml", true);
@@ -27,11 +28,11 @@ public class DataGenConsumer {
 	        jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 
 	        List<PersonClient> personList = new ArrayList<>();
-	        Random rand = new Random();
+	        rand = new Random();
 	        for(int i=0;i<10000;i++){
 	        	int personType = rand.nextInt(4);
 	        	PersonClient person = getPerson(personType);
-	        	generateData(person,rand);
+	        	generateData(person);
 	        	personList.add(person);
 	        }
 	        
@@ -51,7 +52,7 @@ public class DataGenConsumer {
 	          }
 	}
 
-	private static void generateData(PersonClient person, Random rand) {
+	private static void generateData(PersonClient person) {
 		double discountOffset = rand.nextInt(10)/10;
 		double discountTakeoutOffset = rand.nextInt(10)/10;
 		double serviceOffset = rand.nextInt(10)/10;
@@ -66,19 +67,7 @@ public class DataGenConsumer {
 		int budgetOffset = rand.nextInt(budgetDiff);
 		person.setData(discountOffset, discountTakeoutOffset, serviceOffset, prepDistanceOffset, spendMoneyOffset, slowDeliveryOffset, greenOffset, budgetOffset);
 		
-		int Xcoord = rand.nextInt(100);
-		int Ycoord = rand.nextInt(100);
-		int regio = 0;
-		if(Xcoord <= 25){
-			if(Ycoord <= 25) regio = 0;
-			else regio = 2;
-		}else{
-			if(Ycoord <= 25) regio = 1;
-			else regio = 3;
-		}
-		person.setXcoord(Xcoord);
-		person.setYcoord(Ycoord);
-		person.setRegio(regio);
+
 	}
 
 	private static PersonClient getPerson(int personType) {
@@ -86,15 +75,67 @@ public class DataGenConsumer {
 		switch(personType){
 		case 0: person = new YoungPeople();
 				person.setPeopleClasee("young");
+				int Xcoord = rand.nextInt(100);
+				int Ycoord = rand.nextInt(100);
+				int regio = 0;
+				if(Xcoord <= 50){
+					if(Ycoord <= 50) regio = 0;
+					else regio = 2;
+				}else{
+					if(Ycoord <= 50) regio = 1;
+					else regio = 3;
+				}
+				person.setXcoord(Xcoord);
+				person.setYcoord(Ycoord);
+				person.setRegio(regio);
 				break;
 		case 1: person = new OldPeople();
 				person.setPeopleClasee("old");
+				Xcoord = rand.nextInt(100);
+				Ycoord = rand.nextInt(100);
+				regio = 0;
+				if(Xcoord <= 50){
+					if(Ycoord <= 50) regio = 0;
+					else regio = 2;
+				}else{
+					if(Ycoord <= 50) regio = 1;
+					else regio = 3;
+				}
+				person.setXcoord(Xcoord);
+				person.setYcoord(Ycoord);
+				person.setRegio(regio);
 				break;
 		case 2: person = new GreenPeople();
 				person.setPeopleClasee("green");
+				Xcoord = rand.nextInt(75);
+				Ycoord = rand.nextInt(75);
+				regio = 0;
+				if(Xcoord <= 50){
+					if(Ycoord <= 50) regio = 0;
+					else regio = 2;
+				}else{
+					if(Ycoord <= 50) regio = 1;
+					else regio = 3;
+				}
+				person.setXcoord(Xcoord);
+				person.setYcoord(Ycoord);
+				person.setRegio(regio);
 				break;
 		case 3: person = new RichPeople();
 				person.setPeopleClasee("rich");
+				Xcoord = rand.nextInt(75) + 25;
+				Ycoord = rand.nextInt(75) + 25;
+				regio = 0;
+				if(Xcoord <= 50){
+					if(Ycoord <= 50) regio = 0;
+					else regio = 2;
+				}else{
+					if(Ycoord <= 50) regio = 1;
+					else regio = 3;
+				}
+				person.setXcoord(Xcoord);
+				person.setYcoord(Ycoord);
+				person.setRegio(regio);
 				break;
 		default : person = null;
 				break;

@@ -29,23 +29,23 @@ public class NegotiationProtocol {
 			if(acceptedOrder){
 				double distance = Math.sqrt((personClient.getXcoord() - order.getxCoordFirm())*(personClient.getXcoord() - order.getxCoordFirm())
 						+ (personClient.getYcoord() - order.getyCoordFirm())*(personClient.getYcoord() - order.getyCoordFirm()));
-				valueTakeout = (personClient.getTakeout() - order.getTakeout()) + (personClient.getGreen() - order.getGreen()) + (personClient.getPrepDistance()) - (distance)/100;
+				valueTakeout = (personClient.getTakeout() - order.getTakeout()) + (personClient.getGreen() - order.getGreen()) + (personClient.getPrepDistance()) - (distance)/100*3;
 				valueTakeout = valueTakeout;
-				valueDelayedDelivery = (order.getDiscount() - personClient.getDiscount());
+				valueDelayedDelivery = (-order.getDiscount() + personClient.getDiscount());
 				//System.out.println(valueTakeout + " " + valueDelayedDelivery);
 			if(valueTakeout<valueDelayedDelivery){
 				boolean check = boltzmannCheck(valueDelayedDelivery, 0);
-				if(valueDelayedDelivery>0)personClient.setLateDelivery(true);
+				if(valueDelayedDelivery>valueSpendMoney)personClient.setLateDelivery(true);
 				/*else if(check){
 					personClient.setLateDelivery(true);
 				}*/
 				else personClient.setDeliveryAtHome(true);
 			}else{
-				boolean check = boltzmannCheck(valueDelayedDelivery, 0);
-				if(valueTakeout>0)personClient.setTakeoutBoolean(true);
-				/*else if(check){
+				boolean check = boltzmannCheck(valueTakeout, 0);
+				if(valueTakeout>valueSpendMoney*3)personClient.setTakeoutBoolean(true);
+				else if(check){
 					personClient.setTakeoutBoolean(true);
-				}*/
+				}
 				else personClient.setDeliveryAtHome(true);
 			}
 			}
