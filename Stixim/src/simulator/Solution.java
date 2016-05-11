@@ -12,7 +12,9 @@ public class Solution {
 	List<Order> orderList;
 	List<PersonClient> personList;
 	Map<Integer,List<PersonClient>> personMap;
-		
+	public List<Double> oldcost;
+	public List<Double> newcost;
+	
 	public Solution(List<Order> orderList, List<PersonClient> personList) {
 		super();
 		this.orderList = orderList;

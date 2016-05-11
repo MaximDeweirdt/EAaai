@@ -56,10 +56,10 @@ public class NegotiationProtocol {
 			
 			//update prijzen indien de order in de eerste stap niet geaccepteerd is
 			if(!acceptedOrder){
-				double price = order.getPrice() - 0.001;
+				double price = order.getPrice() - 1;
 				order.setPrice(price);
 			}else{
-				double price = order.getPrice() + 0.001;
+				double price = order.getPrice() + 1;
 				order.setPrice(price);
 			}
 			

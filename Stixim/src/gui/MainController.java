@@ -54,6 +54,8 @@ public class MainController implements Initializable {
 	private TextArea dataTextArea3;
 	@FXML
 	private TextArea dataTextArea4;
+	@FXML
+	private TextArea dataTextArea5;
 	
 	@FXML
 	private Label distanceLabel;
@@ -92,8 +94,13 @@ public class MainController implements Initializable {
 			doc.getDocumentElement().normalize();
 			nList = doc.getElementsByTagName("personClient");
 			List<PersonClient> personList = unmarshalData(nList, orderList);
-
+			
 			solution = new Solution(orderList, personList);
+			List<Double> old = new ArrayList<>();
+			for(Order o:orderList){
+				old.add(o.getPrice());
+			}
+			solution.oldcost = old;
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -126,6 +133,7 @@ public class MainController implements Initializable {
 		dataTextArea2.clear();
 		dataTextArea3.clear();
 		dataTextArea4.clear();
+		dataTextArea5.clear();
 		
 		spendSlider.setValue(0);
 		greenSlider.setValue(0);
@@ -267,6 +275,19 @@ public class MainController implements Initializable {
 			dataTextArea.appendText("aantal jonge mensen = " + amountOfYoungPeople + "\n");
 			dataTextArea.appendText("aantal oude mensen = " + amountOfOldPeople + "\n");
 			dataTextArea.appendText("aantal rijke mensen = " + amountOfRichPeople + "\n");
+			
+			dataTextArea = dataTextArea5;
+			List<Double> neww = new ArrayList<>();
+			for(Order o:solution.getOrderList()){
+				neww.add(o.getPrice());
+			}
+			solution.newcost = neww;
+			List<Double> old = solution.oldcost;
+			dataTextArea.clear();
+			dataTextArea.appendText("Old cost \t new cost \n");
+			for(int i=0 ; i< 10; i++){
+				dataTextArea.appendText(old.get(i)  + " \t " + neww.get(i) + "\n");
+			}
 		}
 	}
 

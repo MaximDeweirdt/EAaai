@@ -26,6 +26,7 @@
                   <Label fx:id="discountLabel" layoutX="205.0" layoutY="220.0" text="0" />
                   <Label fx:id="distanceLabel" layoutX="205.0" layoutY="290.0" text="0" />
                   <Label fx:id="spendLabel" layoutX="205.0" layoutY="360.0" text="0" />
+                  <TextArea fx:id="dataTextArea5" layoutY="389.0" prefHeight="390.0" prefWidth="278.0" />
                </children>
             </Pane>
          </left>
